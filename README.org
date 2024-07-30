@@ -10,3 +10,7 @@ IG scheduler.
 
   clojure -M:run freya.jpg
 #+end_src
+
+* Links
+
+- [[https://developers.facebook.com/apps/1216719566444718/instagram-business/API-Setup/][The app]] on FB dev portal.

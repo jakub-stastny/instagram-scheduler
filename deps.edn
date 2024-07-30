@@ -3,4 +3,4 @@
         clj-http/clj-http {:mvn/version "3.12.3"}
         cheshire/cheshire {:mvn/version "5.10.1"}}
  :aliases
- {:run {:main-opts ["-m" "jakub-stastny.ig-scheduler.core"]}}}
+ {:run {:main-opts ["-m" "jakub-stastny.instagram-scheduler.core"]}}}

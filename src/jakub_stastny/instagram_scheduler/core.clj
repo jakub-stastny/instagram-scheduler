@@ -1,5 +1,5 @@
-(ns jakub-stastny.ig-scheduler.core
-  (:require [clj-http.client :as client]
+(ns jakub-stastny.instagram-scheduler.core
+  (:require [clj-http.client :as http]
             [cheshire.core :as json]))
 
 (defn verify-env [var-name]
@@ -11,7 +11,7 @@
         params {:access_token access-token
                 :image_url image-url
                 :caption caption}
-        response (client/post url {:form-params params :content-type :json})]
+        response (http/post url {:form-params params :content-type :json})]
     (println "Request URL:" url)
     (println "Request Params:" params)
     (if (= 200 (:status response))
