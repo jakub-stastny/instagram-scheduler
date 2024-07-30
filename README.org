@@ -1,6 +1,16 @@
 * About
 
-IG scheduler.
+IG scheduler that retrieves the first picture in a drop box directory on Google Drive (or possibly Dropbox) and uploads it to Instagram.
+
+It's meant to run with cron from Tuesday to Sunday at 9 AM:
+
+#+begin_src cron
+  0 9 * * 2-7 /path/to/my-script.sh
+#+end_src
+
+** Instagram API limitations
+- JPEG is the only image format supported.
+- Images must be passed as public URLs.
 
 * Run
 
@@ -8,7 +18,7 @@ IG scheduler.
   export IG_ACCESS_TOKEN="<your-ig-access-token>"
   export IG_ACCOUNT_ID="<your-ig-account-id>"
 
-  clojure -M:run freya.jpg
+  clojure -M:run "https://drive.usercontent.google.com/download?id=1q5KFq5ZhK4HYaI_KeiRgo_9_JBD7VBNQ&export=download"
 #+end_src
 
 * Links
