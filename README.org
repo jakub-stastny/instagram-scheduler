@@ -1,0 +1,12 @@
+* About
+
+IG scheduler.
+
+* Run
+
+#+begin_src sh
+  export IG_ACCESS_TOKEN="<your-ig-access-token>"
+  export IG_ACCOUNT_ID="<your-ig-account-id>"
+
+  clojure -M:run freya.jpg
+#+end_src
